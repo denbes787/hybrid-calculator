@@ -1,0 +1,711 @@
+:root {
+  --color-white: #f5f5f5;
+  --color-dark: #1a1a1a;
+  --color-gray: #666666;
+  --color-border: #cccccc;
+}
+
+@font-face {
+  font-family: "ToyotaType";
+  src: url("./assets/fonts/ToyotaType-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.App {
+  font-family: "ToyotaType", "Arial", "Helvetica", sans-serif;
+  color: var(--color-dark);
+  padding: 0 0 80px;
+}
+
+header {
+  background: var(--color-dark);
+  text-align: center;
+}
+
+.headerContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  height: 320px;
+}
+
+.headerContainer > h1{
+  padding: 0px 30px 10px;
+}
+
+footer,
+.container,
+.headerContainer,
+.contactContainer,
+.hybridSavingContainer,
+.compareTableContainer,
+.carPictureContainer {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 810px;
+}
+
+footer {
+  margin-top: 60px;
+  text-align: left;
+  max-width: 1224px;
+  padding: 0 24px;
+}
+
+.footerContainer {
+  border-top: 1px solid var(--color-border);
+}
+
+.footerContainer > h4 {
+  margin: 30px 0px 10px;
+  line-height: 26px;
+}
+
+.footerDisclaimerBox {
+  padding: 0 24px;
+}
+
+.contactSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./assets/images/background.png");
+  background-size: cover;
+  height: 469px;
+}
+
+.ComparisonStepsSection {
+  background: var(--color-white);
+  padding: 80px 0 60px;
+}
+
+.comparisonStep {
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.comparisonStep > .overlineText {
+  margin-bottom: 30px;
+}
+
+.comparisonStep:last-child {
+  margin-bottom: 0;
+}
+
+.hybridSavingSection {
+  background: white;
+  margin-bottom: 40px;
+}
+
+.hybridSavingContainer {
+  max-width: 796px;
+  padding: 65px 32px 15px;
+}
+
+.hybridSavingContainer > h3 {
+  margin-top: 0; 
+}
+
+.compareTableContainer {
+  max-width: 850px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.compareTableContainer > div {
+  flex: 1;
+  margin: 0 32px;
+}
+
+.contactContainer {
+  max-width: 780px;
+  text-align: center;
+  background: var(--color-dark);
+  padding: 40px 25px 42px;
+}
+
+.contactContainer > h2 {
+    max-width: 730px;
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 40px;
+    line-height: 48px;
+}
+
+.hybridSavingItem {
+  margin-bottom: 50px;
+}
+
+.compareTableContainer .hybridSavingItem {
+  margin-bottom: 40px;
+}
+
+h1 {
+  color: var(--color-white);
+  font-size: 48px;
+}
+
+h2 {
+  color: var(--color-white);
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 8px;
+}
+
+h4 {
+  font-size: 14px;
+  color: var(--color-dark);
+}
+
+sup {
+  font-size: 10px;
+  padding-left: 4px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+input,
+button,
+select {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: " ToyotaType", "Arial", "Helvetica", sans-serif;
+}
+
+.inputContainer {
+  border-bottom: 1px solid var(--color-dark);
+  display: inline-block;
+}
+
+.inputContainer span {
+  width: 92px;
+  text-align: left;
+  display: inline-block;
+}
+
+input {
+  font-size: 24px;
+  height: 26px;
+  display: inline-block;
+  max-width: 90px;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+input.active {
+  position: static;
+}
+
+.selectContainer {
+  font-size: 24px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.selectContent {
+  border-bottom: 1px solid var(--color-dark);
+  background: url("./assets/images/link.png") no-repeat right center;
+  cursor: pointer;
+  padding-bottom: 8px;
+  text-align: left;
+}
+
+.selectBox {
+  position: absolute;
+  left: 0;
+  background: white;
+  font-size: 18px;
+  min-width: 352px;
+  width: 100%;
+  text-align: left;
+  z-index: 1000;
+}
+
+.selectItem {
+  border-bottom: 1px solid var(--color-white);
+  padding: 16px;
+}
+
+.selectItem:hover {
+  background: var(--color-dark);
+  color: white;
+}
+
+.compareVehicle {
+  min-width: 140px;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.compareVehicle .selectContent {
+  padding-right: 30px;
+}
+
+.comparisonVehicle {
+  max-width: 360px;
+}
+
+.body1 {
+  font-size: 24px;
+}
+
+.body2 {
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 18px;
+  color: var(--color-dark);
+}
+
+.captionText {
+  text-align: left;
+  font-size: 12px;
+  color: var(--color-gray);
+  margin-bottom: 8px;
+}
+
+.caculationText {
+  font-size: 36px;
+  line-height: 48px;
+  color: var(--color-dark);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.overlineText {
+  text-transform: uppercase;
+  color: var(--color-gray);
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.primaryButton,
+.secondaryButton {
+  border-radius: 120px;
+  font-weight: bold;
+  padding: 12px 20px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0px 8px;
+}
+
+.primaryButton {
+  background: var(--color-white);
+}
+
+.secondaryButton {
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+}
+
+.closeButton {
+  position: absolute;
+  margin: 0;
+  top: 56px;
+  right: 56px;
+}
+
+.inputGroup {
+  display: inline-block;
+  margin: 50px 32px 0;
+}
+
+.arrowSign {
+  display: inline-block;
+  margin-right: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.underline {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 16px;
+  margin-bottom: 40px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.comparisonVehicleDropdown,
+.comparisonVehicleDropdown .selectContent {
+  font-size: 18px;
+}
+
+.carPictureContainer {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.carPicture img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2)
+}
+
+.carPicture {
+  position: relative;
+  width: 222px;
+  height: 200px;
+}
+
+.loadingBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.animationText {
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+
+.animationText.active {
+  opacity: 0;
+}
+
+.flexBox {
+  display: flex;
+}
+
+.flexInput {
+  flex: 1px;
+}
+
+.fuel-text-area {
+  text-align: right;
+  flex: 6;
+}
+
+.km-text-area {
+  text-align: left;
+  flex: 7;
+}
+
+.carPictureContainer {
+  position: relative;
+  display: flex;
+}
+
+.hiddenContainer {
+  display: none;
+}
+
+.hiddenContainer img {
+  opacity: 0;
+  width: 600px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .personalise-text {
+    width: 420px;
+    margin: 0 auto;
+  }
+
+  .fuel-text-area {
+    text-align: left;
+  }
+
+  .km-text-area {
+    text-align: right;
+  }
+}
+
+@media (max-width: 767px) {
+  /* //CSS */
+  .hybridSavingContainer {
+    padding: 65px 32px 15px;
+  }
+
+  .flexBox {
+    display: block;
+  }
+
+  .ComparisonStepsSection {
+    padding: 48px 32px 26px;
+  }
+
+  .comparisonStep > .overlineText {
+    margin-bottom: 16px;
+  }
+
+  .overlineText,
+  .body1,
+  .carComparisionArea {
+    text-align: left;
+  }
+
+  .overlineText,
+  label {
+    font-size: 12px;
+    color: var(--color-gray);
+    display: block;
+  }
+
+  label {
+    margin-bottom: 8px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .selectContent {
+    font-size: 20px;
+  }
+
+  .inputGroup {
+    display: block;
+    margin: 32px 0;
+  }
+
+  .inputContainer {
+    width: 100%;
+  }
+
+  .body1 {
+    font-size: 20px;
+  }
+
+  .caculationText {
+    font-size: 20px;
+  }
+
+  .compareVehicle {
+    min-width: 76px;
+    margin: 8px 8px 8px 0;
+  }
+
+  .compareTableContainer {
+    display: none;
+  }
+
+  .comparisonVehicle,
+  .selectBox {
+    min-width: 100%;
+  }
+
+  .comparisonVehicleDropdown,
+  .comparisonVehicleDropdown .selectContent {
+    font-size: 16px;
+  }
+
+  .caculationText {
+    margin-top: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .compareVehicle .selectBox {
+    width: 300%;
+  }
+
+  .compareVehicle .selectItem {
+    font-size: 20px;
+  }
+
+  .carPictureContainer {
+    justify-content: space-between;
+  }
+
+  .hiddenContainer img {
+    opacity: 0;
+  }
+
+  .contactContainer {
+    max-width: 530px;
+    padding: 10px 40px 12px;
+  }
+
+  .contactContainer > h2 {
+    max-width: 464px;
+  }
+
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid var(--color-gray);
+  border-color: var(--color-gray) transparent var(--color-gray) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 560px) {
+  .carPicture {
+    width: 180px;
+    height: 150px;
+  }
+
+  .closeButton {
+    top: 44px;
+    right: 44px;
+  }
+}
+
+@media (max-width: 375px) {
+  .App {
+    padding-bottom: 24px;
+  }
+  .footerContainer {
+    padding: 16px 0;
+  }
+  footer {
+    margin-top: 56px;
+  }
+  .contactSection {
+    padding: 32px 0;
+  }
+  label,
+  .captionText {
+    text-transform: uppercase;
+  }
+  .comparisonStep {
+    margin-bottom: 24px;
+  }
+
+  .headerContainer {
+    height: 262px;
+  }
+
+  .ComparisonStepsSection {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .hybridSavingContainer {
+    padding-top: 48px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .hybridSavingContainer .underline {
+    padding-bottom: 8px;
+    border: 0;
+  }
+  .hybridSavingItem {
+    margin-bottom: 40px;
+  }
+  h3,
+  h2 {
+    font-size: 28px;
+  }
+
+  .closeButton {
+    top: 32px;
+    right: 32px;
+  }
+
+  .contactContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contactContainer > h2 {
+    font-size: 28px;
+  }
+
+  .primaryButton, .secondaryButton {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .carPicture {
+    width: 120px;
+    height: 100px;
+  }
+
+  .primaryButton, .secondaryButton{
+    margin-bottom: 16px;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (max-width: 320px) {
+  /* //CSS */
+  .ComparisonStepsSection,
+  .hybridSavingSection {
+    padding: 48px 24px 0;
+  }
+
+  .ComparisonStepsSection {
+    padding-bottom: 60px;
+  }
+
+  .compareVehicle {
+    min-width: 76px;
+    margin: 8px 8px 8px 0;
+  }
+
+  .comparisonStep {
+    margin-bottom: 60px;
+  }
+}
